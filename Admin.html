@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="admin1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Admin Dashboard</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="sidebar">
+            <div class="profile">
+                <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="profile_picture">
+                <h3>Admin</h3>
+            </div>
+            <ul>
+                <li>
+                    <a href="participantdetails.html" class="active">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">Participant</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="track.html">
+                        <span class="icon"><i class="fas fa-list"></i></span>
+                        <span class="item">Track</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule.html">
+                        <span class="icon"><i class="fas fa-list"></i></span>
+                        <span class="item">session</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="attendanceLink">
+                        <span class="icon"><i class="fas fa-check"></i></span>
+                        <span class="item">Attendance</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <section id="welcome">
+                <div style="background-color: hsl(198, 91%, 49%); border-radius: 5px; padding: 20px; text-align: center">
+                    <h1>Welcome to the Admin Dashboard</h1>
+                    <p><b>Manage participants, tracks, session and attendance with ease.</b></p>
+                </div>
+            </section>
+            
+            <section id="attendance" style="display: none;">
+                <div style="background-color: azure; border-radius: 5px; padding: 1px; padding-right: -25px; text-align: center">
+                   
+                    <!-- QR reader -->
+                    <div class="container">
+                        <h1>Scan QR Codes for attendance</h1>
+                        <div class="section">
+                            <div id="my-qr-reader"></div>
+                        </div>
+                        <form id="attendanceForm" method="post" action="attendance.php">
+                            <input type="hidden" id="data" name="data">
+                            <button type="submit">OK</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </section>  
+        </div>
+ 
+    </div>
+   
+    <script src="adminscript.js"></script>
+    
+</body>
+</html>

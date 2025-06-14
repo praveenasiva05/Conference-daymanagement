@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: url("https://media.istockphoto.com/id/1268060154/photo/chair-and-spheres-in-empty-futuristic-room-brainstorming-concept-color-gradient-background.jpg?s=612x612&w=0&k=20&c=ujCvc8EZrAen-z_UI7JuCYp3GxmipVB9_L-GpKvlTRE=") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper .sidebar {
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3 {
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+    color: #0c7db1;
+    background: white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon {
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+    display: block;
+}
+
+.wrapper .section {
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+body.active .wrapper .sidebar {
+    left: -225px;
+}
+
+body.active .wrapper .section {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Welcome Message */
+.welcome-message {
+    background-color: rgb(217, 14, 239);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-message h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    background-color: #0404e7;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Attendance Section */
+#attendance {
+    background-color: rgb(22, 6, 254);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#attendance h1 {
+    margin-bottom: 20px;
+}
+
+#attendance .container {
+    margin-bottom: 10px;
+}
+
+#attendance .container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#attendance .container .section {
+    margin-bottom: 20px;
+}
+
+#attendance #my-qr-reader {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#attendance form {
+    margin-top: 20px;
+}
+
+#attendance form #data {
+    margin-bottom: 10px;
+}
+
+#attendance form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(0, 232, 104);
+    color: hwb(251 4% 2%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#attendance form button:hover {
+    background-color: #01922c;
+}
+
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#attendanceTable th, #attendanceTable td {
+    border: 1px solid hwb(318 2% 5%);
+    padding: 8px;
+    text-align: left;
+    
+}
+
+#attendanceTable th {
+    background-color: hsl(309, 92%, 50%);
+}

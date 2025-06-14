@@ -1,0 +1,87 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="dash.css">
+    <title>Conference Schedule</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    
+    <h1>User dashboard</h1>
+    <div class="main-content">
+        <div id="schedules" class="section">
+            <h2>Conference Schedule</h2>
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Session</th>
+                        <th>Speaker</th>
+                        <th>Venue</th>
+                        <th>Register</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8.00AM</td>
+                        <td>A remote software development</td>
+                        <td>Mr. John</td>
+                        <td>Main Hall</td>
+                        <td><button class="register-btn">Register</button></td>
+                    </tr>
+                    <tr>
+                        <td>9.00AM</td>
+                        <td>Womeninledership</td>
+                        <td>Mrs. Priya</td>
+                        <td>Mini Auditorium</td>
+                        <td><button class="register-btn">Register</button></td>
+                    </tr>
+                    <tr>
+                        <td>10.00AM</td>
+                        <td>Digital Transformation</td>
+                        <td>Ms. Aruna</td>
+                        <td>Mini Hall</td>
+                        <td><button class="register-btn">Register</button></td>
+                    </tr>
+                    <tr>
+                        <td>11.00AM</td>
+                        <td>The bussiness of Entertainment </td>
+                        <td>Mr. Arun</td>
+                        <td>Mini hall 2</td>
+                        <td><button class="register-btn">Register</button></td>
+                    </tr>
+                    <tr>
+                        <td>1.00PM</td>
+                        <td>Sports </td>
+                        <td>Dr.Premkumar</td>
+                        <td>Main Auditorium</td>
+                        <td><button class="register-btn">Register</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Registration Form Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register for Session</h2>
+            <form id="registerSessionForm" action="qrgenerator.php" method="post">
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="session">Session:</label>
+                <input type="text" id="session" name="session" readonly><br>
+                <label for="speaker">Speaker:</label>
+                <input type="text" id="speaker" name="speaker" readonly><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div id="qrcode"></div>
+
+    <script src="dashscript.js"></script>
+</body>
+</html>
